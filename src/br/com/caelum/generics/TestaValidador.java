@@ -16,7 +16,7 @@ public class TestaValidador {
 		formulario2.adiciona(new CampoNumerico("-4"));
 				
 		Validador<CampoNumerico> validadorNumerico = new ValidadorMaiorQueZero();
-		// System.out.println(formulario2.valida(validador)); // NÃO FUNCIONA!
+		System.out.println(formulario2.valida(validador));
 		System.out.println(formulario2.valida(validadorNumerico));
 	}
 }

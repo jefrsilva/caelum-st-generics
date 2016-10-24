@@ -10,7 +10,7 @@ public class Formulario<T> {
 		campos.add(campo);
 	}
 	
-	public boolean valida(Validador<T> validador) {
+	public boolean valida(Validador<? super T> validador) {
 		for (T campo : campos) {
 			if (!validador.valida(campo)) {
 				return false;
