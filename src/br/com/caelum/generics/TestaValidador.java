@@ -2,14 +2,20 @@ package br.com.caelum.generics;
 
 public class TestaValidador {
 	public static void main(String[] args) {
+		Formulario formulario = new Formulario();
+		formulario.adiciona(new CampoDeTexto("Foca"));
+		formulario.adiciona(new CampoDeTexto(""));
+		formulario.adiciona(new CampoNumerico("5"));
+		formulario.adiciona(new CampoNumerico(""));
+		
 		ValidadorNaoVazio validador = new ValidadorNaoVazio();
-		System.out.println(validador.valida(new CampoDeTexto("Foca")));
-		System.out.println(validador.valida(new CampoDeTexto("")));
-		System.out.println(validador.valida(new CampoNumerico("5")));
-		System.out.println(validador.valida(new CampoNumerico("")));
+		// formulario.valida(validador);
+		
+		Formulario formulario2 = new Formulario();
+		formulario2.adiciona(new CampoNumerico("5"));
+		formulario2.adiciona(new CampoNumerico("-4"));
 		
 		ValidadorMaiorQueZero validadorNumerico = new ValidadorMaiorQueZero();
-		System.out.println(validadorNumerico.valida(new CampoNumerico("5")));
-		System.out.println(validadorNumerico.valida(new CampoNumerico("-4")));
+		// formulario2.valida(validadorNumerico);
 	}
 }
