@@ -3,7 +3,7 @@ package br.com.caelum.generics;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Formulario<T> {
+public class Formulario<T extends CampoDeTexto> {
 	private List<T> campos = new ArrayList<>();
 	
 	public void adiciona(T campo) {
