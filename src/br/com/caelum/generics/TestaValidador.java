@@ -21,5 +21,14 @@ public class TestaValidador {
 		
 		formulario.copia(formulario2);
 		System.out.println(formulario.valida(validador));
+		
+		Formulario<String> formulario3 = new Formulario<>();
+		formulario3.adiciona("Foca");
+		formulario3.valida(new Validador<String>() {
+			@Override
+			public boolean valida(String campo) {
+				return true;
+			}
+		});
 	}
 }
