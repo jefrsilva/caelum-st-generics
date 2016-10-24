@@ -5,8 +5,8 @@ public class TestaValidador {
 		Formulario<CampoDeTexto> formulario = new Formulario<>();
 		formulario.adiciona(new CampoDeTexto("Foca"));
 		formulario.adiciona(new CampoDeTexto(""));
-		formulario.adiciona(new CampoNumerico("5"));
-		formulario.adiciona(new CampoNumerico(""));
+		// formulario.adiciona(new CampoNumerico("5"));
+		// formulario.adiciona(new CampoNumerico(""));
 		
 		Validador<CampoDeTexto> validador = new ValidadorNaoVazio();
 		System.out.println(formulario.valida(validador));
@@ -18,5 +18,8 @@ public class TestaValidador {
 		Validador<CampoNumerico> validadorNumerico = new ValidadorMaiorQueZero();
 		System.out.println(formulario2.valida(validador));
 		System.out.println(formulario2.valida(validadorNumerico));
+		
+		// formulario.copia(formulario2); // NÂO FUNCIONA! Formulario<CampoNumerico> não é Formulário<CampoDeTexto>
+		System.out.println(formulario.valida(validador));
 	}
 }
