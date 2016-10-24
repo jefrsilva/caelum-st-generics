@@ -8,14 +8,14 @@ public class TestaValidador {
 		formulario.adiciona(new CampoNumerico("5"));
 		formulario.adiciona(new CampoNumerico(""));
 		
-		ValidadorNaoVazio validador = new ValidadorNaoVazio();
-		// formulario.valida(validador);
+		Validador<CampoDeTexto> validador = new ValidadorNaoVazio();
+		System.out.println(formulario.valida(validador));
 		
 		Formulario formulario2 = new Formulario();
 		formulario2.adiciona(new CampoNumerico("5"));
 		formulario2.adiciona(new CampoNumerico("-4"));
 		
-		ValidadorMaiorQueZero validadorNumerico = new ValidadorMaiorQueZero();
-		// formulario2.valida(validadorNumerico);
+		Validador<CampoNumerico> validadorNumerico = new ValidadorMaiorQueZero();
+		System.out.println(formulario2.valida(validadorNumerico));
 	}
 }

@@ -9,4 +9,13 @@ public class Formulario {
 	public void adiciona(CampoDeTexto campo) {
 		campos.add(campo);
 	}
+	
+	public boolean valida(Validador validador) {
+		for (CampoDeTexto campo : campos) {
+			if (!validador.valida(campo)) {
+				return false;
+			}
+		}
+		return true;
+	}
 }
