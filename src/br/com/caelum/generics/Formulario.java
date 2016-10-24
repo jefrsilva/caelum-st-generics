@@ -10,8 +10,8 @@ public class Formulario<T> {
 		campos.add(campo);
 	}
 	
-	public void copia(Formulario<T> formulario) {
-		List<T> campos = formulario.getCampos();
+	public void copia(Formulario<? extends T> formulario) {
+		List<? extends T> campos = formulario.getCampos();
 		this.campos.addAll(campos);
 	}
 	

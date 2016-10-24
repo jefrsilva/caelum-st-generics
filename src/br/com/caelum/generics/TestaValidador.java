@@ -19,7 +19,7 @@ public class TestaValidador {
 		System.out.println(formulario2.valida(validador));
 		System.out.println(formulario2.valida(validadorNumerico));
 		
-		// formulario.copia(formulario2); // NÂO FUNCIONA! Formulario<CampoNumerico> não é Formulário<CampoDeTexto>
+		formulario.copia(formulario2);
 		System.out.println(formulario.valida(validador));
 	}
 }
